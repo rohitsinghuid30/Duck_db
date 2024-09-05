@@ -1,7 +1,7 @@
 import pandas as pd
 import duckdb
 
-
+'''
 # query 1
 data = duckdb.read_csv("src/data/mydata.csv")
 print(data)
@@ -28,6 +28,12 @@ print("")
 # read sql person
 data_sql = duckdb.sql('SELECT * FROM person')
 print(data_sql.fetchone())
+'''
 
+# pandas dataframe
+df = pd.read_csv("src/data/mydata2.csv")
+data4 = duckdb.sql("select * from df where age>30")
+# print(df)
+print(data4)
 
 
